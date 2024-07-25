@@ -18,6 +18,7 @@ public class APNsController {
     @Resource
     private PushService pushService;
 
+
     @ResponseBody
     @GetMapping(value = "/send")
     public ApiResponse<Object> create(@RequestParam(defaultValue = "title") String title, @RequestParam(defaultValue = "Example!") String message, @RequestParam(defaultValue = "8a5c16959ae103b643bfe32c4af80b3b1d55f07f732f5ee600a67a6cf53d9aab") String token) throws Exception {
