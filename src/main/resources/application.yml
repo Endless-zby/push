@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: push
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  profiles:
+    active: apns
+
+server:
+  port: 10002
