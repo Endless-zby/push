@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    driverClassName: org.sqlite.JDBC
+    url: jdbc:sqlite:push.db
+    type: com.zaxxer.hikari.HikariDataSource

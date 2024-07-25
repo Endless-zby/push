@@ -5,7 +5,15 @@ spring:
     multipart:
       max-file-size: 10MB
   profiles:
-    active: apns
+    active: apns, mysql
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
 
 server:
   port: 10002

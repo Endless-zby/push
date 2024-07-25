@@ -1,6 +1,8 @@
 package cn.byzhao.push.service.serviceImpl;
 
 import cn.byzhao.push.listener.MyCustomMetricsListener;
+import cn.byzhao.push.repository.ClientDriveRepository;
+import cn.byzhao.push.repository.MessageHistoryRepository;
 import com.eatthepath.pushy.apns.ApnsClient;
 import com.eatthepath.pushy.apns.ApnsClientBuilder;
 import com.eatthepath.pushy.apns.PushNotificationResponse;
@@ -11,6 +13,7 @@ import com.eatthepath.pushy.apns.util.SimpleApnsPushNotification;
 import com.eatthepath.pushy.apns.util.TokenUtil;
 import com.eatthepath.pushy.apns.util.concurrent.PushNotificationFuture;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +26,11 @@ public class APNsService {
 //
 //    @Resource
 //    private ApnsClient apnsClient;
+    @Autowired
+    private ClientDriveRepository clientDriveRepository;
+
+    @Autowired
+    private MessageHistoryRepository messageHistoryRepository;
 
     static ApnsClient apnsClient;
 

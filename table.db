@@ -1,0 +1,17 @@
+
+-- token
+CREATE TABLE IF NOT EXISTS token (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     client_id TEXT NOT NULL,
+     drive_id TEXT NOT NULL
+);
+
+-- history
+CREATE TABLE history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      client_id TEXT NOT NULL,
+      drive_id TEXT NOT NULL,
+      title TEXT NOT NULL,
+      body TEXT NOT NULL,
+      timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
