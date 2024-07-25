@@ -14,6 +14,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Resource
     private PushTokenInterceptor pushTokenInterceptor;
 
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(pushTokenInterceptor).addPathPatterns("/**");
