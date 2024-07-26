@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface ClientDriveService {
 
-    ClientDrive getOne(Integer id);
+    ClientDrive findById(Integer id);
 
 }

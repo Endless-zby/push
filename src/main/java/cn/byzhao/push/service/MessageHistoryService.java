@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface MessageHistoryService {
 
-    MessageHistory getOne(Integer id);
+    MessageHistory findById(Integer id);
 
 }

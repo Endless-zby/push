@@ -35,14 +35,14 @@ public class MessageController {
     @ResponseBody
     @GetMapping(value = "/getDrive")
     public ApiResponse<ClientDrive> getDrive(@RequestParam() Integer id) throws Exception {
-        ClientDrive one = clientDriveService.getOne(id);
+        ClientDrive one = clientDriveService.findById(id);
         return ApiResponse.isSuccess(one);
     }
 
     @ResponseBody
     @GetMapping(value = "/getHistory")
     public ApiResponse<MessageHistory> create(@RequestParam() Integer id) throws Exception {
-        MessageHistory one = messageHistoryService.getOne(id);
+        MessageHistory one = messageHistoryService.findById(id);
         return ApiResponse.isSuccess(one);
     }
 }

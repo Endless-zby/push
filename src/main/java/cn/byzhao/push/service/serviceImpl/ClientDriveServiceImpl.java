@@ -12,9 +12,8 @@ public class ClientDriveServiceImpl implements ClientDriveService {
     @Autowired
     private ClientDriveRepository clientDriveRepository;
 
-
     @Override
-    public ClientDrive getOne(Integer id) {
+    public ClientDrive findById(Integer id) {
         return clientDriveRepository.findById(id).orElse(null);
     }
 }
