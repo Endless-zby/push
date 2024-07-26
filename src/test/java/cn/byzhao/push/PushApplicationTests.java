@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Slf4j
 @SpringBootTest
-class PushApplicationTests {
+public class PushApplicationTests {
 
     @Test
     public void contextLoads() {
