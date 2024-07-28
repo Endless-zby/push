@@ -16,4 +16,15 @@ public class ClientDriveServiceImpl implements ClientDriveService {
     public ClientDrive findById(Integer id) {
         return clientDriveRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public ClientDrive save(ClientDrive clientDrive) {
+        return clientDriveRepository.save(clientDrive);
+    }
+
+    @Override
+    public ClientDrive findByClientId(String clientId){
+
+        return clientDriveRepository.findByClientId(clientId);
+    }
 }

@@ -26,11 +26,6 @@ public class APNsService {
 //
 //    @Resource
 //    private ApnsClient apnsClient;
-    @Autowired
-    private ClientDriveRepository clientDriveRepository;
-
-    @Autowired
-    private MessageHistoryRepository messageHistoryRepository;
 
     static ApnsClient apnsClient;
 

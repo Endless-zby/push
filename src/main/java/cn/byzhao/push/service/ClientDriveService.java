@@ -8,4 +8,8 @@ public interface ClientDriveService {
 
     ClientDrive findById(Integer id);
 
+    ClientDrive save(ClientDrive clientDrive);
+
+    ClientDrive findByClientId(String clientId);
+
 }

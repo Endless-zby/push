@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClientDriveRepository extends JpaRepository<ClientDrive, Integer> {
+
+    ClientDrive findByClientId(String clientId);
+
 }

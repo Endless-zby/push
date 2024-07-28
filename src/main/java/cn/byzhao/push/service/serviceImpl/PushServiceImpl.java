@@ -1,5 +1,7 @@
 package cn.byzhao.push.service.serviceImpl;
 
+import cn.byzhao.push.entity.MessageHistory;
+import cn.byzhao.push.service.MessageHistoryService;
 import cn.byzhao.push.service.PushService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -17,9 +19,13 @@ public class PushServiceImpl implements PushService {
     @Resource
     private APNsService apNsService;
 
+    @Resource
+    private MessageHistoryService messageHistoryService;
+
     @Override
-    public void send(String title, String message, String clientToken) {
-        apNsService.send(title, message, clientToken);
-        androidService.send(title, message, clientToken);
+    public void sendAndSave(MessageHistory messageHistory) {
+        apNsService.send(messageHistory.getTitle(), messageHistory.getBody(), messageHistory.getDriveId());
+        androidService.send(messageHistory.getTitle(), messageHistory.getBody(), messageHistory.getDriveId());
+        messageHistoryService.save(messageHistory);
     }
 }
